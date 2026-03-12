@@ -1,0 +1,8 @@
+FABIAN CAMILO CASTRO DIAZ 
+Descripcion
+En este taller aprendí los fundamentos de la Programación Orientada a Objetos en Python. Creé clases como Estudiante con atributos y métodos, y desarrollé una calculadora de notas que permite manejar múltiples estudiantes sin repetir código.
+
+3 Conceptos más importantes de OOP
+1. Clase: Es el molde o plantilla que define los atributos y métodos que tendrán los objetos.
+2. Objeto: Es una instancia concreta de una clase, con sus propios valores en los atributos.
+3. Método: Son las funciones dentro de una clase que definen el comportamiento de los objetos.
