@@ -1,0 +1,17 @@
+interface Volador {
+    void volar();
+    void aterrizar();
+    //Java 8+: metodo con implementacion por defecto
+    default vpiud repostar () {
+        System.out.println("Repostando...");
+    }
+}
+interfece Nadador{
+    void nadar();
+}
+//Implementa dos interfaces - herencia multiple de contratos
+class Pato implements Volador, Nadador {
+    public void(self): print("Volar")
+    public aterrizar(self): print("Plof!")
+    public nadar(self): print("Nadar")
+}
