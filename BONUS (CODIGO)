@@ -1,0 +1,25 @@
+//Java 
+
+public void imprimirDungeon() {
+    for (int f = 0; f < dungeon.length; f++) {
+        for (int c = 0; c < dungeon[f].length; c++) {
+            if (dungeon[f][c] != null) {
+                System.out.printf("[%-12s]", dungeon[f][c].getNombre());
+            } else {
+                System.out.printf("[%-12s]", "[ vacío ]");
+            }
+        }
+        System.out.println();
+    }
+}
+
+#Python
+
+def imprimir_dungeon(self):
+    for fila in self.dungeon:
+        for celda in fila:
+            if celda is not None:
+                print(f'[{celda.nombre:<12}]', end='')
+            else:
+                print(f'[{"vacío":<12}]', end='')
+        print()
