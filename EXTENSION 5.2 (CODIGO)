@@ -1,0 +1,19 @@
+//Java 
+
+public double promedioNivel() {
+    int suma = 0;
+    int contador = 0;
+    for (Personaje p : equipoPrincipal) {
+        if (p != null) {
+            suma += p.getNivel();
+            contador++;
+        }
+    }
+    return contador == 0 ? 0 : (double) suma / contador;
+}
+
+#Python
+
+def promedio_nivel(self):
+    niveles = [p.nivel for p in self.equipo_principal if p is not None]
+    return sum(niveles) / len(niveles) if niveles else 0
