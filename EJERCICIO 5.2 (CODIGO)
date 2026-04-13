@@ -1,0 +1,84 @@
+//Java
+        // 1. Crear gremio
+        GremioRPG g = new GremioRPG("Los Guardianes");
+
+        // 2. Crear 8 personajes
+        Personaje p1 = new Personaje("Aragorn", 12, 150);
+        Personaje p2 = new Personaje("Legolas", 10, 130);
+        Personaje p3 = new Personaje("Gimli", 9, 140);
+        Personaje p4 = new Personaje("Gandalf", 20, 200);
+        Personaje p5 = new Personaje("Frodo", 5, 70);
+        Personaje p6 = new Personaje("Sam", 4, 65);
+        Personaje p7 = new Personaje("Merry", 3, 60);
+        Personaje p8 = new Personaje("Pippin", 3, 58);
+
+        // 3. Unir al equipo (los primeros 6 entran, los últimos 2 a espera)
+        g.unirseAlEquipo(p1);
+        g.unirseAlEquipo(p2);
+        g.unirseAlEquipo(p3);
+        g.unirseAlEquipo(p4);
+        g.unirseAlEquipo(p5);
+        g.unirseAlEquipo(p6);
+        g.unirseAlEquipo(p7);
+        g.unirseAlEquipo(p8);
+
+        // 4. Colocar 4 personajes en dungeon
+        g.colocarEnDungeon(p1, 0, 0);
+        g.colocarEnDungeon(p2, 1, 1);
+        g.colocarEnDungeon(p3, 2, 2);
+        g.colocarEnDungeon(p4, 0, 2);
+
+        // 5. Simular batalla (poner hp=0 a dos personajes)
+        p5.setHp(0);
+        p6.setHp(0);
+
+        // 6. Limpiar caídos
+        g.limpiarCaidos();
+
+        // 7. Reporte final
+        g.reporteGremio();
+    }
+
+#Python
+
+# 1. Crear gremio
+g = GremioRPG('Los Guardianes')
+
+# 2. Crear 8 personajes
+p1 = Personaje('Aragorn', 12, 150)
+p2 = Personaje('Legolas', 10, 130)
+p3 = Personaje('Gimli', 9, 140)
+p4 = Personaje('Gandalf', 20, 200)
+p5 = Personaje('Frodo', 5, 70)
+p6 = Personaje('Sam', 4, 65)
+p7 = Personaje('Merry', 3, 60)
+p8 = Personaje('Pippin', 3, 58)
+
+# 3. Unir al equipo
+g.unirse_al_equipo(p1)
+g.unirse_al_equipo(p2)
+g.unirse_al_equipo(p3)
+g.unirse_al_equipo(p4)
+g.unirse_al_equipo(p5)
+g.unirse_al_equipo(p6)
+g.unirse_al_equipo(p7)
+g.unirse_al_equipo(p8)
+
+# 4. Colocar 4 personajes en dungeon
+g.colocar_en_dungeon(p1, 0, 0)
+g.colocar_en_dungeon(p2, 1, 1)
+g.colocar_en_dungeon(p3, 2, 2)
+g.colocar_en_dungeon(p4, 0, 2)
+
+# 5. Simular batalla
+p5.hp = 0
+p6.hp = 0
+
+# 6. Limpiar caídos
+g.limpiar_caidos()
+
+# 7. Reporte final
+g.reporte_gremio()
+}
+
+#Python
