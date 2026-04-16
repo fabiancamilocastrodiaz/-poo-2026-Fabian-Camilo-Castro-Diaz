@@ -1,0 +1,41 @@
+fn sumar(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+fn es_par(n: i32) -> bool {
+    n % 2 == 0
+}
+
+fn main() {
+    // Variables
+    let nombre = "Fabián";
+    let mut numero = 5;
+
+    println!("Hola, {} 👋", nombre);
+
+    // Uso de función
+    let resultado = sumar(numero, 3);
+    println!("La suma es: {}", resultado);
+
+    // Condicional
+    if es_par(resultado) {
+        println!("El resultado es par");
+    } else {
+        println!("El resultado es impar");
+    }
+
+    // Bucle
+    for i in 1..=5 {
+        println!("Iteración número: {}", i);
+    }
+
+    // Ownership
+    let texto1 = String::from("Rust es potente");
+    let texto2 = texto1; // se mueve la propiedad
+
+    println!("Texto: {}", texto2);
+
+    // Variable mutable
+    numero = numero + 10;
+    println!("Nuevo valor de número: {}", numero);
+}
