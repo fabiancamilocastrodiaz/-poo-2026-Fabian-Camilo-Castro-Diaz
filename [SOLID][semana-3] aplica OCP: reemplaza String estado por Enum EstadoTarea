@@ -1,0 +1,32 @@
+// EstadoTarea.java
+public enum EstadoTarea {
+    PENDIENTE, 
+    EN_PROGRESO, 
+    TERMINADA, 
+    BLOQUEADA;
+}
+
+// Tarea.java (modificada)
+public class Tarea {
+    private String nombre;
+    private String responsable;
+    private EstadoTarea estado;
+
+    public Tarea(String nombre, String responsable) {
+        this.nombre = nombre;
+        this.responsable = responsable;
+        this.estado = EstadoTarea.PENDIENTE;
+    }
+
+    public void setEstado(EstadoTarea e) {
+        this.estado = e;
+    }
+
+    public EstadoTarea getEstado() {
+        return estado;
+    }
+}
+
+1. ¿Qué violación encontraron?	R/ La clase Tarea usaba un String para el estado, lo que obligaba a modificar el método setEstado() cada vez que se quería agregar un nuevo estado. Esto viola OCP porque la clase no estaba cerrada para modificación.
+2. ¿Cómo la corrigieron? R/	Se reemplazo el String estado por un Enum EstadoTarea. Ahora agregar un nuevo estado solo requiere agregar un valor al Enum, sin tocar la clase Tarea.
+3. ¿Qué principio aplica?	R/OCP (Open/Closed Principle) – Abierto para extensión, cerrado para modificación.
