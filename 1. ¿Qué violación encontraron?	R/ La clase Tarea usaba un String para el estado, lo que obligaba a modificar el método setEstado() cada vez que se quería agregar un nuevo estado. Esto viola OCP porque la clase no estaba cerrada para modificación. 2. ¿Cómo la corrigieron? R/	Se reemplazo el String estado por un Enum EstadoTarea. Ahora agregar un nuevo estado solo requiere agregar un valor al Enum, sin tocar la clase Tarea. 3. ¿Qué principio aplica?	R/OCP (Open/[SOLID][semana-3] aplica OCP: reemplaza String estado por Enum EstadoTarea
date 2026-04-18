@@ -1,0 +1,25 @@
+# estado_tarea.py
+from enum import Enum
+
+class EstadoTarea(Enum):
+    PENDIENTE = 'pendiente'
+    EN_PROGRESO = 'en progreso'
+    TERMINADA = 'terminada'
+    BLOQUEADA = 'bloqueada'
+
+# tarea.py (modificada)
+class Tarea:
+    def __init__(self, nombre, responsable):
+        self.nombre = nombre
+        self.responsable = responsable
+        self.estado = EstadoTarea.PENDIENTE
+
+    def set_estado(self, e):
+        self.estado = e
+
+    def get_estado(self):
+        return self.estado
+
+1. ¿Qué violación encontraron?	R/ La clase Tarea usaba un String para el estado, lo que obligaba a modificar el método setEstado() cada vez que se quería agregar un nuevo estado. Esto viola OCP porque la clase no estaba cerrada para modificación.
+2. ¿Cómo la corrigieron? R/	Se reemplazo el String estado por un Enum EstadoTarea. Ahora agregar un nuevo estado solo requiere agregar un valor al Enum, sin tocar la clase Tarea.
+3. ¿Qué principio aplica?	R/OCP (Open/Closed Principle) – Abierto para extensión, cerrado para modificación.
